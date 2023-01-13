@@ -15,11 +15,11 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<CRUDShop /> }/>
-        <Route path="/orders" element={<Orders />}/>
-        <Route path="/orders/addOrder" element={<AddOrderScreen/>}/>
-        <Route path="/products" element={<ProductsScreen />}/>
-        <Route path="/orders/:id" element={<EditOrder/>}/>
+        <Route exact path="/" element={<Orders />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/orders/addOrder" element={<AddOrderScreen />} />
+        <Route path="/products" element={<ProductsScreen />} />
+        <Route path="/orders/:id" element={<EditOrder />} />
       </Routes>
     </BrowserRouter>
   );

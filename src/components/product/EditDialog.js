@@ -49,7 +49,7 @@ const EditDialog = ({ open, productSelected, handleCloseEdit, setProducts }) => 
     return (
         <div>
             <Dialog open={open} onClose={handleCloseEdit}>
-                <DialogTitle>Add/Edit product</DialogTitle>
+                <DialogTitle>Edit product</DialogTitle>
                 <DialogContent>
                     <TextField
                         margin="dense"

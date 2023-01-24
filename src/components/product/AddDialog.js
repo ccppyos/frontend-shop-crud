@@ -1,6 +1,6 @@
-import { Button, Dialog, Select, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControl, Input, InputAdornment, InputLabel, OutlinedInput, TextField, MenuItem, Checkbox, FormControlLabel, FormGroup } from '@mui/material'
-import axios from 'axios'
+import { Button, Dialog, Select, DialogActions, DialogContent, DialogTitle, FormControl, Input, InputAdornment, InputLabel, TextField, MenuItem, Checkbox, FormControlLabel, FormGroup } from '@mui/material'
 import React, { useEffect, useState } from 'react'
+import axiosCrud from '../../config/crudAxios'
 
 
 const newProduct = {
@@ -30,7 +30,7 @@ const AddEditDialog = ({ open, handleClose, setProducts }) => {
     const onSubmitProduct = async () => {
         console.log(product);
         try {
-            const response = await axios.post("http://localhost:5000/api/products/createProduct", product)
+            const response = await axiosCrud.post("/products/createProduct", product)
             console.log(response.data);
             product._id = response.data._id;
             setProducts((prevProducts) => [...prevProducts, product]);
